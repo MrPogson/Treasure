@@ -1,0 +1,50 @@
+import random
+global Pos,gridA,gridB
+Pos=56
+
+
+print(" This is my Introduction \n Welcome to My game! \n It's a really good game!")
+
+#Main function 
+def main():
+
+    play =input("\nDo you want to 'Play' or 'Quit'? \n").upper() #Ask if they want to play
+    if play == "PLAY": #if they choose to play
+        playgame()#go to function 'playgame'
+        
+    elif play == "QUIT":#if they choose quit
+        game_over()#go to function 'Game over'
+
+        
+    else:#or they put anything else in
+        print("Error - Please type 'Play' or 'Quit'\n")#tell them to try again
+        main()#go back to top of function
+        
+
+def playgame():#THIS IS A FUNCTION
+    print("this is where the code will go to play the game")
+    grid_A_set_up()
+    grid_B_set_up()
+    grid_B_print()
+
+def game_over():
+    print("this is where the code will go to end the game")
+
+def grid_A_set_up():
+    global Pos,gridA,gridB
+    gridA= ["B","B","B","B","B","G","G","G","G","G","G","G","G","G","G","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X","X"]
+    random.shuffle(gridA)
+    gridA.insert(P,"P")
+
+def grid_B_set_up():
+    global Pos,gridA,gridB
+    gridB = [".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","."]
+    gridB.insert(P, "P")
+
+def grid_B_print():
+    global Pos,gridA,gridB
+    matrix = [gridB [i:i+8] for i in range (0,len(gridB),8)]
+    for a,b,c,d,e,f,g,h in matrix:
+        print (a,b,c,d,e,f,g,h)
+
+main()
