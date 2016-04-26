@@ -22,17 +22,4 @@ def playgame():#THIS IS A FUNCTION
 def game_over():
     print("this is where the code will go to end the game")
 
-def set_up_grid_a():
-    print("this is where we set up the shown grid")
-    
-def set_up_grid_b():
-    print("this is where we set up the secret grid")
-    
-def move():
-    print("this is where we move")
-    
-def score():
-    print("this is where we check the score")
-    
-
 main()#TELLS IT TO GO TO FUNCTION, IT WON'T RUN WITHOUT THIS!
